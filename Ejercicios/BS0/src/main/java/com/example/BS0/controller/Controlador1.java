@@ -1,15 +1,12 @@
 package com.example.BS0.controller;
 
 import com.example.BS0.clase.Persona;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController()
 public class Controlador1 {
     @GetMapping("/user")
-    public String getHola(String nombre){
+    public String getHola(@RequestParam String nombre){
         return "Hola " + nombre;
     }
 

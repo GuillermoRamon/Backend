@@ -13,7 +13,7 @@ public class Perfil2 implements Perfiles{
     String perfil2;
     @Override
     public void miFuncion() {
-        perfil2 = "perfil2";
+        perfil2 = "perfil 2";
         System.out.println("hola desde " + perfil2);
     }
 }

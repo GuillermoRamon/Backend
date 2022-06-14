@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 @PropertySource("classpath:myConfiguration.properties")
-@Profile("default")
+@Profile("Perfil1")
 public class Perfil1 implements Perfiles {
 
     String perfil1;
     @Override
     public void miFuncion() {
 
-        perfil1 = "perfil1";
+        perfil1 = "perfil 1";
         System.out.println("hola desde " + perfil1);
     }
 }

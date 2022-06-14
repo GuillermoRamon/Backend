@@ -1,0 +1,4 @@
+2022-06-14 15:53:41.989 ERROR 2988 --- [http-nio-8080-exec-4] com.example.BS5.controller.Controlador1  : Esto es un error del controller
+2022-06-14 15:53:41.996  WARN 2988 --- [http-nio-8080-exec-4] com.example.BS5.controller.Controlador1  : Esto es un mensaje de warning del controller
+2022-06-14 15:53:43.781 ERROR 2988 --- [http-nio-8080-exec-5] com.example.BS5.controller.Controlador1  : Esto es un error del controller
+2022-06-14 15:53:43.782  WARN 2988 --- [http-nio-8080-exec-5] com.example.BS5.controller.Controlador1  : Esto es un mensaje de warning del controller

@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "eaed3cac-4510-4a1b-aaba-36a086053335",
+		"name": "BS4 Propiedades",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "valores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/valores/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"valores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VAR3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/VAR3/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"VAR3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BS4-1 Perfiles",
+			"item": [
+				{
+					"name": "valores 8081",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/valores/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"valores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "parametros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/parametros/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"parametros",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myConfiguracion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/miConfiguracion/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"miConfiguracion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "perfil",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/Perfil/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"Perfil",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

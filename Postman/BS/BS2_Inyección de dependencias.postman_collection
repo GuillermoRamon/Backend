@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "985b61eb-6b10-423a-8e96-0573413ad747",
+		"name": "BS2 Inyección de dependencias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "addCiudad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "nombre",
+								"value": "Malaga",
+								"type": "text"
+							},
+							{
+								"key": "cantidad",
+								"value": "28000",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/controlador1/addCiudad?nombre=Toledo&cantidad=25000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controlador1",
+								"addCiudad"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Toledo"
+								},
+								{
+									"key": "cantidad",
+									"value": "25000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPersona",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "nombre",
+								"value": "Guillermo",
+								"type": "text"
+							},
+							{
+								"key": "edad",
+								"value": "24",
+								"type": "text"
+							},
+							{
+								"key": "ciudad",
+								"value": "Toledo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/controlador1/addPersona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controlador1",
+								"addPersona"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "getPersona",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/controlador2/getPersona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controlador2",
+								"getPersona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCiudades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/controlador2/getCiudades",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controlador2",
+								"getCiudades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beanQualifier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/controlador1/bean/?num=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controlador1",
+								"bean",
+								""
+							],
+							"query": [
+								{
+									"key": "num",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

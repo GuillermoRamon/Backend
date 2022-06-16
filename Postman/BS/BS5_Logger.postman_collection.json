@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "a0530325-f525-43bb-8d33-67bb31323a39",
+		"name": "BS5 Logger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080//log/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"log",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

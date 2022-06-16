@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "1b0126c9-6a9a-4601-940e-8461c7fed133",
+		"name": "BS0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user?nombre=Guillermo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Guillermo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "userAdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Guillermo\",\r\n    \"edad\": \"24\",\r\n    \"poblacion\": \"Toledo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/useradd",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"useradd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

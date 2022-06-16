@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "ae37914a-80b4-43f1-99d5-d72cfc652fc1",
+		"name": "RS1 Controladores",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "ArrayPersona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"nombre\": \"a\",\r\n    \"edad\": \"24\",\r\n    \"poblacion\": \"Toledo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona1/persona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona1",
+								"persona"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2\",\r\n    \"nombre\": \"n\",\r\n    \"edad\": \"70\",\r\n    \"poblacion\": \"Madrid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona2/persona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona2",
+								"persona"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona3/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona3",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona4/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona4",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona4/nombre/n",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona4",
+								"nombre",
+								"n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

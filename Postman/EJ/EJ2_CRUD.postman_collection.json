@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "e5931ce3-f03f-456a-b2af-5289a7cefd99",
+		"name": "EJ2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "addPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"eustaquio\",\r\n    \"password\":\"123\",\r\n    \"name\":\"eustaquioDeveloper\",\r\n    \"surname\":\"rodriguez sanchez\",\r\n    \"companyEmail\":\"correo@Bosonit.com\",\r\n    \"personalEmail\":\"correo2@gmail.com\",\r\n    \"city\":\"Toledo\",\r\n    \"active\": 0,\r\n    \"createDate\":\"2008-12-12\",\r\n    \"imagenUrl\":\"https://....\",\r\n    \"terminationDate\":\"2010-12-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/person/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "findPersonId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/person/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findPersonaName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/person/nombre/eustaquio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"nombre",
+								"eustaquio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/person/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

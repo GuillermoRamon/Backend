@@ -1,6 +1,6 @@
 package com.example.BP1.person.infraestructure.controller;
 
-import com.example.BP1.person.application.port.PersonaService;
+import com.example.BP1.person.application.port.SavePersonaService;
 import com.example.BP1.person.domain.Persona;
 import com.example.BP1.person.infraestructure.controller.dto.input.PersonaInputDTO;
 import com.example.BP1.person.infraestructure.controller.dto.output.PersonaOutputDTO;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/person")
 public class AddPersonController {
     @Autowired
-    PersonaService personaService;
+    SavePersonaService savepersonaService;
 
     @PostMapping
     public ResponseEntity<PersonaOutputDTO> anadirPerson(@RequestBody PersonaInputDTO personaInPutDto) throws Exception {
-        return new ResponseEntity<>(new PersonaOutputDTO(personaService.addPerson(new Persona(personaInPutDto))), HttpStatus.OK);
+        return new ResponseEntity<>(new PersonaOutputDTO(savepersonaService.addPerson(new Persona(personaInPutDto))), HttpStatus.OK);
     }
 }

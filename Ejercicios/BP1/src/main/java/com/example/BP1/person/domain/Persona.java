@@ -4,6 +4,7 @@ import com.example.BP1.person.infraestructure.controller.dto.input.PersonaInputD
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -15,14 +16,22 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int idPersona;
+    @Size(min = 6, max = 10, message = "Longitud de usuario no puede ser superior a 10 caracteres e inderior a 6 caracteres")
+    @Column(nullable = false)
     private String usuario;
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private String name;
     private String surname;
+    @Column(nullable = false)
     private String companyEmail;
+    @Column(nullable = false)
     private String personalEmail;
+    @Column(nullable = false)
     private String city;
     private boolean active;
+    @Column(nullable = false)
     private Date createDate;
     private String imagenUrl;
     private Date terminationDate;

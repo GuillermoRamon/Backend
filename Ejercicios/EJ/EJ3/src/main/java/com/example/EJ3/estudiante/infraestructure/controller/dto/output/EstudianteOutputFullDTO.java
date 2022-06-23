@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 @Setter
@@ -16,7 +17,7 @@ public class EstudianteOutputFullDTO {
     private String coments;
     private Integer profesor;
     private String branch;
-    private List<EstudianteAsignatura> estudios;
+    private List<Integer> estudios = new ArrayList<>();
 
     private Integer idPersona;
     private String usuario;
@@ -38,7 +39,9 @@ public class EstudianteOutputFullDTO {
         setComents(estudiante.getComents());
         setProfesor(estudiante.getProfesor().getIdProfesor());
         setBranch(estudiante.getBranch());
-        setEstudios(estudiante.getEstudios());
+        for (int i = 0; i < estudiante.getEstudios().size();i++){
+            estudios.add(estudiante.getEstudios().get(i).getIdAsignatura());
+        }
 
         setIdPersona(estudiante.getPersona().getIdPersona());
         setUsuario(estudiante.getPersona().getUsuario());

@@ -18,19 +18,19 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/student/2?ouputType=full",
+									"raw": "localhost:8080/student/4?ouputType=simple",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
 										"student",
-										"2"
+										"4"
 									],
 									"query": [
 										{
 											"key": "ouputType",
-											"value": "full"
+											"value": "simple"
 										}
 									]
 								}
@@ -49,7 +49,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"persona\" : 1,\r\n    \"numHoursWeek\" : 40,\r\n    \"coments\": \"No puede trabajar por las tardes\",\r\n    \"branch\" : \"Back\"\r\n}",
+									"raw": "{\r\n    \"persona\" : 2,\r\n    \"numHoursWeek\" : 40,\r\n    \"coments\": \"No puede trabajar por las tardes\",\r\n    \"profesor\":3,\r\n    \"branch\" : \"Back\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -86,7 +86,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"usuario\":\"eustaquio\",\r\n    \"password\":\"123\",\r\n    \"name\":\"eustaquioDeveloper\",\r\n    \"surname\":\"rodriguez sanchez\",\r\n    \"companyEmail\":\"correo@Bosonit.com\",\r\n    \"personalEmail\":\"correo2@gmail.com\",\r\n    \"city\":\"Toledo\",\r\n    \"active\": 0,\r\n    \"createDate\":\"2008-12-12\",\r\n    \"imagenUrl\":\"https://....\",\r\n    \"terminationDate\":\"2010-12-12\"\r\n}",
+									"raw": "{\r\n    \"usuario\":\"aurelio\",\r\n    \"password\":\"123\",\r\n    \"name\":\"aurelioDeveloper\",\r\n    \"surname\":\"rodriguez sanchez\",\r\n    \"companyEmail\":\"correo@Bosonit.com\",\r\n    \"personalEmail\":\"correo2@gmail.com\",\r\n    \"city\":\"Toledo\",\r\n    \"active\": 0,\r\n    \"createDate\":\"2008-12-12\",\r\n    \"imagenUrl\":\"https://....\",\r\n    \"terminationDate\":\"2010-12-12\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -112,7 +112,77 @@
 		},
 		{
 			"name": "Profesor",
-			"item": []
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addTeacher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"persona\":1,\r\n    \"coments\":\"No puede trabajar por las tardes\",\r\n    \"branch\":\"Fullstack\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/profesor",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"profesor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Asignatura",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addSubject",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"asignatura\":\"Java\",\r\n    \"comment\":\"Ningun comentario\",\r\n    \"initialDate\":\"2008-12-12\",\r\n    \"finishDate\":\"2010-12-12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/subject",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"subject"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		}
 	]
 }

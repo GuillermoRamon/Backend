@@ -19,7 +19,7 @@ public class AddStudentController {
     AddEstudianteService estudianteService;
 
     @PostMapping
-    public ResponseEntity<EstudianteOutputDTO> anadirEstudiante(@RequestBody EstudianteInputDTO estudianteInputDTO){
+    public ResponseEntity<EstudianteOutputDTO> anadirEstudiante(@RequestBody EstudianteInputDTO estudianteInputDTO) throws Exception {
         return new ResponseEntity<>(new EstudianteOutputDTO(estudianteService.saveEstudiante(estudianteInputDTO)), HttpStatus.ACCEPTED);
     }
 }

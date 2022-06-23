@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.util.List;
 
 @Entity
@@ -20,7 +21,7 @@ import java.util.List;
 public class Profesor {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String idProfesor;
+    private Integer idProfesor;
     @OneToOne
     @JoinColumn(name = "idPersona")
     private Persona persona;
@@ -28,9 +29,9 @@ public class Profesor {
     @Column(nullable = false)
     private String branch;
 
-    public Profesor(ProfesorInputDTO profesorInputDTO, Persona persona){
+    public Profesor(@Valid ProfesorInputDTO profesorInputDTO, Persona person){
         setIdProfesor(profesorInputDTO.getIdProfesor());
-        setPersona(persona);
+        setPersona(person);
         setComents(profesorInputDTO.getComents());
         setBranch(profesorInputDTO.getBranch());
     }

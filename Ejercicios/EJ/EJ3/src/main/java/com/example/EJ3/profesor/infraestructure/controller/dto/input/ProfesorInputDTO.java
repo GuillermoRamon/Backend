@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 @Getter
 @Setter
 public class ProfesorInputDTO {
-    private String idProfesor;
+    private Integer idProfesor;
     private Integer persona;
     private String coments;
     private String branch;

@@ -5,18 +5,16 @@ import com.example.EJ3.estudiante.domain.Estudiante;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.validation.constraints.Size;
+
 import java.util.Date;
 import java.util.List;
 @Setter
 @Getter
 public class EstudianteOutputFullDTO {
     private Integer idStudent;
-//    private Integer persona;
     private Integer numHoursWeek;
     private String coments;
-    //    private Profesor profesor;
+    private Integer profesor;
     private String branch;
     private List<EstudianteAsignatura> estudios;
 
@@ -38,7 +36,7 @@ public class EstudianteOutputFullDTO {
         setIdStudent(estudiante.getIdStudent());
         setNumHoursWeek(estudiante.getNumHoursWeek());
         setComents(estudiante.getComents());
-//        this.profesor = estudiante.getProfesor();
+        setProfesor(estudiante.getProfesor().getIdProfesor());
         setBranch(estudiante.getBranch());
         setEstudios(estudiante.getEstudios());
 

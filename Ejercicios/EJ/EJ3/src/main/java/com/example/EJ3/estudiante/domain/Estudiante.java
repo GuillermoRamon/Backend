@@ -3,9 +3,11 @@ package com.example.EJ3.estudiante.domain;
 import com.example.EJ3.asignatura.domain.EstudianteAsignatura;
 import com.example.EJ3.estudiante.infraestructure.controller.dto.input.EstudianteInputDTO;
 import com.example.EJ3.person.domain.Persona;
+import com.example.EJ3.profesor.domain.Profesor;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,21 +28,21 @@ public class Estudiante {
     @Column( nullable = false)
     private Integer numHoursWeek;
     private String coments;
-    /*@ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idProfesor")
-    private Profesor profesor;*/
+    private Profesor profesor;
     @Column(nullable = false)
     private String branch;
     @OneToMany
     private List<EstudianteAsignatura> estudios;
 
-    public Estudiante(EstudianteInputDTO estudianteInputDTO, Persona person) {
+    public Estudiante(@Valid EstudianteInputDTO estudianteInputDTO, Persona person, Profesor profe, List<EstudianteAsignatura> lista) {
         setIdStudent(estudianteInputDTO.getIdStudent());
         setPersona(person);
         setNumHoursWeek(estudianteInputDTO.getNumHoursWeek());
         setComents(estudianteInputDTO.getComents());
-//        this.profesor = estudianteInputDTO.getProfesor();
+        setProfesor(profe);
         setBranch(estudianteInputDTO.getBranch());
-        this.estudios = new ArrayList<>();
+        this.estudios = new ArrayList<>(lista);
     }
 }

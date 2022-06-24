@@ -32,13 +32,17 @@ public class AddEstudianteServiceImpl implements AddEstudianteService {
         Persona persona = findPersonaService.findPerson(estudianteInputDTO.getPersona());
         Profesor profesor = findProfesorService.findProfesorById(estudianteInputDTO.getProfesor());
 
+        if(profesor.getPersona().getIdPersona().equals(persona.getIdPersona()))
+            throw new RuntimeException("El estudiante que se quiere insertar es profesor");
+
         List<EstudianteAsignatura> lista = new ArrayList<>();
         for (int i = 0; i < estudianteInputDTO.getEstudios().size();i++){
             int x = estudianteInputDTO.getEstudios().get(i);
             EstudianteAsignatura asig = findAsignaturaService.findAsignaturaById(x);
             lista.add(asig);
         }
-
         return estudianteRepositorio.save(new Estudiante(estudianteInputDTO, persona, profesor, lista));
     }
+
+
 }

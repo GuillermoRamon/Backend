@@ -15,7 +15,7 @@ public class AddProfesorController {
     AddProfesorService addProfesorService;
 
     @PostMapping
-    public ResponseEntity<ProfesorOuputDTO> anadirProfesor(@RequestBody ProfesorInputDTO profesorInputDTO){
+    public ResponseEntity<ProfesorOuputDTO> anadirProfesor(@RequestBody ProfesorInputDTO profesorInputDTO) throws Exception {
         return new ResponseEntity<>(new ProfesorOuputDTO(addProfesorService.saveProfesor(profesorInputDTO)), HttpStatus.ACCEPTED);
     }
 }

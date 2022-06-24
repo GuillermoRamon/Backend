@@ -1,15 +1,14 @@
 package com.example.EJ3.person.infraestructure.controller;
 
+import com.example.EJ3.estudiante.infraestructure.controller.dto.output.EstudianteOutputDTO;
+import com.example.EJ3.estudiante.infraestructure.controller.dto.output.EstudianteOutputFullDTO;
 import com.example.EJ3.person.application.port.FindPersonaService;
 import com.example.EJ3.person.exception.NotFoundException404;
 import com.example.EJ3.person.infraestructure.controller.dto.output.PersonaOutputDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -42,4 +41,5 @@ public class FindPersonController {
                 .map(persona -> new PersonaOutputDTO(persona))
                 .toList(), HttpStatus.ACCEPTED);
     }
+
 }

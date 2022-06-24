@@ -19,9 +19,9 @@ public class FindStudentController {
     public ResponseEntity findStudentId (@PathVariable int id, @RequestParam(defaultValue = "simple", name = "ouputType") String ouputType) throws Exception {
         switch (ouputType.toLowerCase()){
             case "simple":
-                return new ResponseEntity<>(new EstudianteOutputDTO(estudianteService.findEstudianteSimple(id)), HttpStatus.ACCEPTED);
+                return new ResponseEntity<>(new EstudianteOutputDTO(estudianteService.findEstudianteById(id)), HttpStatus.ACCEPTED);
             case "full":
-                return new ResponseEntity<>(new EstudianteOutputFullDTO(estudianteService.findEstudianteSimple(id)), HttpStatus.ACCEPTED);
+                return new ResponseEntity<>(new EstudianteOutputFullDTO(estudianteService.findEstudianteById(id)), HttpStatus.ACCEPTED);
             default:
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Elige entre full o simple");
         }

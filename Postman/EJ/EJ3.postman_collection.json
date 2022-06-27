@@ -49,7 +49,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"persona\" : 5,\r\n    \"numHoursWeek\" : 40,\r\n    \"coments\": \"No puede trabajar por las tardes\",\r\n    \"profesor\":2,\r\n    \"branch\" : \"Back\",\r\n    \"estudios\":[3,4]\r\n}",
+									"raw": "{\r\n    \"persona\" : 5,\r\n    \"numHoursWeek\" : 40,\r\n    \"coments\": \"Disponibilidad horaria\",\r\n    \"profesor\":2,\r\n    \"branch\" : \"Back\",\r\n    \"estudios\":[3,4]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -64,6 +64,67 @@
 									"port": "8080",
 									"path": [
 										"student"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "updateSubjectAdd",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idStudent\": 6,\r\n    \"persona\": 5,\r\n    \"numHoursWeek\": 40,\r\n    \"coments\": \"Disponibilidad horaria\",\r\n    \"profesor\": 2,\r\n    \"branch\": \"Back\",\r\n    \"estudios\": [\r\n        3,\r\n        4,\r\n        7\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/student/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"student",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateSubjectDelete",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idStudent\": 6,\r\n    \"persona\": 5,\r\n    \"numHoursWeek\": 40,\r\n    \"coments\": \"Disponibilidad horaria\",\r\n    \"profesor\": 2,\r\n    \"branch\": \"Back\",\r\n    \"estudios\": [\r\n        7\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/student/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"student",
+										"delete"
 									]
 								}
 							},

@@ -5,6 +5,7 @@ import com.example.EJ3.estudiante.infraestructure.controller.dto.input.Estudiant
 import com.example.EJ3.estudiante.infraestructure.controller.dto.output.EstudianteOutputDTO;
 import com.example.EJ3.estudiante.infraestructure.controller.dto.output.EstudianteOutputFullDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,8 +18,13 @@ public class UpdateStudentController {
     @Autowired
     UpdateEstudianteService updateEstudianteService;
 
-    @PutMapping
-    public ResponseEntity<EstudianteOutputDTO> anadirAsignatura(@RequestBody EstudianteInputDTO estudianteInputDTO){
-        return null;
+    @PutMapping("/add")
+    public ResponseEntity<EstudianteOutputDTO> anadirAsignatura(@RequestBody EstudianteInputDTO estudianteInputDTO) throws Exception {
+        return new ResponseEntity<>(new EstudianteOutputDTO(updateEstudianteService.asignarAsignatura(estudianteInputDTO)), HttpStatus.ACCEPTED);
+    }
+
+    @PutMapping("/delete")
+    public ResponseEntity<EstudianteOutputDTO> quitarAsignatura(@RequestBody EstudianteInputDTO estudianteInputDTO) throws Exception {
+        return new ResponseEntity<>(new EstudianteOutputDTO(updateEstudianteService.desasignarAsignatura(estudianteInputDTO)), HttpStatus.ACCEPTED);
     }
 }

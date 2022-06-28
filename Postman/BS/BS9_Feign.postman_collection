@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "8d237528-dbd7-463a-9e4a-24965b3e3e36",
+		"name": "BS9 Feign",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21345406"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addPerson",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\":\"aurelio\",\r\n    \"password\":\"123\",\r\n    \"name\":\"aurelioDeveloper\",\r\n    \"surname\":\"rodriguez sanchez\",\r\n    \"companyEmail\":\"correo@Bosonit.com\",\r\n    \"personalEmail\":\"correo2@gmail.com\",\r\n    \"city\":\"Toledo\",\r\n    \"active\": 0,\r\n    \"createDate\":\"2008-12-12\",\r\n    \"imagenUrl\":\"https://....\",\r\n    \"terminationDate\":\"2010-12-12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/person",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"person"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "deletePersonId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/person/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"person",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "getProfesorRestTemplate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/person/profesor/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"person",
+										"profesor",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Profesor",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addTeacher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"persona\":1,\r\n    \"coments\":\"trabaja por las tardes\",\r\n    \"branch\":\"Fullstack\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/profesor",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"profesor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "getProfesorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/profesor/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"profesor",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

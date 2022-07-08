@@ -17,4 +17,9 @@ public class Student {
     private int noteBooks;
     private List<String> activities = new ArrayList<>();
 
+//    constructor
+    public Student(String s) {this.name = s;}
+//    getter
+    public void printListOfActivities(){System.out.println("List of Activities are : " + this.activities);}
+
 }
